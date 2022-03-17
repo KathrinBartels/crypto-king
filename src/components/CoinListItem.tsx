@@ -34,18 +34,18 @@ export default function CoinListItem(props: Props): ReactElement {
   return (
     <Link to={`/currencies/${props.coin.id}`}>
       <Row justify="start" align="middle">
-        <Col span={3}><img width="30" height="30" src={image} alt={coin.name} />{coin.name} ({coin.symbol})</Col>
-        <Col span={3}>{price} €</Col>
-        <Col span={3}>{ath} €</Col>
-        <Col span={3}>{atl} €</Col>
-        <Col span={3}>{total_volume.toLocaleString()} €</Col>
-        <Col span={3}>
+        <Col xs={6} lg={4}><img width="30" height="30" src={image} alt={coin.name} />{coin.name} ({coin.symbol})</Col>
+        <Col xs={6} lg={3}>{price} €</Col>
+        <Col xs={0} lg={3}>{ath} €</Col>
+        <Col xs={0} lg={3}>{atl} €</Col>
+        <Col xs={0} lg={3}>{total_volume.toLocaleString()} €</Col>
+        <Col xs={6} lg={2}>
           <span className={price_change_percentage_24h < 0 ? ("red") : ("green")}>
             {price_change_percentage_24h.toFixed(2)}%
           </span>
         </Col>
-        <Col span={3}>{market_cap}</Col>
-        <Col span={3}>{props.children}</Col>
+        <Col xs={0} lg={3}>{market_cap}</Col>
+        <Col xs={6} lg={3}>{props.children}</Col>
       </Row>
     </Link>
   );
