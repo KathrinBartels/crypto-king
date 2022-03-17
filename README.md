@@ -1,10 +1,6 @@
-# Crypto king
-
-Crypto king - another crypto app
-
 # Project Title
 
-Crypto king - a simple app to show curencies, pulled from [https://www.coingecko.com/]
+Crypto king - a simple website to show curencies, Api used from [https://www.coingecko.com/](https://www.coingecko.com/)
 
 # Get started
 
