@@ -1,0 +1,18 @@
+.name {
+  padding: 0 10px;;
+}
+
+.rank {
+  border-radius: 0.4rem;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 8px;
+  font-weight: 500;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+a button:first-child {
+  margin-right: 10px;
+}

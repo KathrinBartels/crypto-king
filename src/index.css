@@ -1,13 +1,75 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '~antd/dist/antd.css';
+
+a {
+  color: rgb(37, 36, 36)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ant-layout {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ant-layout-header {
+  background-color: white;
+  padding: 0;
+}
+
+.ant-layout-content {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+}
+
+.ant-row {
+  padding: 10px 0;
+  border-bottom: 1px dashed rgb(73, 121, 192);
+}
+
+.ant-row {
+  font-weight: 700;
+}
+
+a .ant-row {
+  font-weight: 300;
+}
+
+a .ant-row:hover {
+  background-color: rgb(187, 212, 230);
+  color: black;
+}
+
+.ant-col img {
+  margin-right: 10px;
+}
+
+.ant-col {
+  text-align: right;
+}
+
+.ant-col:first-child{
+  padding-left: 10px;
+  text-align: left;
+}
+
+.ant-col:last-child{
+  padding-right: 10px;
+}
+
+.ant-col:last-child{
+  padding-right: 10px;
+  text-align: center;
+}
+
+.ant-spin {
+  padding: 100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ant-col span.green {
+  color: green;
+}
+
+.ant-col span.red {
+  color: red;
 }
