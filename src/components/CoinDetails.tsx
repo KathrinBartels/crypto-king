@@ -1,5 +1,5 @@
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import { Button, Tag, Typography } from 'antd';
+import { Button, Col, Row, Tag, Typography } from 'antd';
 import { ReactElement } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useCoinApi } from "../shared/CoinApi";

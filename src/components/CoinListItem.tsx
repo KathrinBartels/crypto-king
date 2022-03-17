@@ -34,7 +34,7 @@ export default function CoinListItem(props: Props): ReactElement {
   return (
     <Link to={`/currencies/${props.coin.id}`}>
       <Row justify="start" align="middle">
-        <Col xs={6} lg={4}><img width="30" height="30" src={image} alt={coin.name} />{coin.name} ({coin.symbol})</Col>
+        <Col xs={6} lg={4}><img width="30" height="30" src={image} alt={coin.name} />{coin.name}</Col>
         <Col xs={6} lg={3}>{price} €</Col>
         <Col xs={0} lg={3}>{ath} €</Col>
         <Col xs={0} lg={3}>{atl} €</Col>
