@@ -1,5 +1,4 @@
-import { FrownOutlined, HeartFilled, HeartOutlined, SmileOutlined } from '@ant-design/icons';
-import { notification } from 'antd';
+import { HeartFilled, HeartOutlined } from '@ant-design/icons';
 import { ReactElement } from 'react';
 import { useCoinApi } from '../shared/CoinApi';
 import { CoinSimple } from '../types/CoinSimple';
@@ -20,21 +19,11 @@ export default function CoinList(): ReactElement {
   const addToWatchlist = (e: React.MouseEvent, action: Action): void => {
     e.preventDefault();
     dispatch(action);
-    notification.open({
-      message: '',
-      description: 'Added to watchlist',
-      icon: <SmileOutlined style={{ color: '#108ee9' }} />
-    })
   };
 
   const removeFromWatchlist = (e: React.MouseEvent, action: Action): void => {
     e.preventDefault();
     dispatch(action);
-    notification.open({
-      message: '',
-      description: 'Removed from watchlist',
-      icon: <FrownOutlined style={{ color: '#108ee9' }} />
-    })
   };
 
   const isInWatchlist = (id: any): any => {
