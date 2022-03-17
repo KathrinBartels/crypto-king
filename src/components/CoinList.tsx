@@ -1,5 +1,6 @@
-import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import { ReactElement } from 'react';
+import { SearchOutlined, HeartFilled, HeartOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
+import { ReactElement, useState } from 'react';
 import { useCoinApi } from '../shared/CoinApi';
 import { CoinSimple } from '../types/CoinSimple';
 import CoinListItem from './CoinListItem';
@@ -11,6 +12,7 @@ export default function CoinList(): ReactElement {
   const { store, dispatch } = useStore();
   const path = "coins/markets?vs_currency=eur&order=market_cap_desc&per_page=100&page=1&sparkline=false";
   const [coins] = useCoinApi<CoinSimple[]>(path);
+  const [search, setSearch] = useState("");
 
   if (!coins) {
     return <LoadingSpinner />;
@@ -33,10 +35,19 @@ export default function CoinList(): ReactElement {
     }
   }
 
+  const handleChange = (e: any) => {
+    setSearch(e.target.value)
+  }
+
+  const filteredCoins = coins.filter(coin =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  )
+
   return (
     <>
+      <Input size="large" placeholder="Search" onChange={handleChange} prefix={<SearchOutlined />} />
       <CoinListHeader />
-      {coins.map((coin) => (
+      {filteredCoins.map((coin) => (
         <CoinListItem coin={coin} key={coin.id}>
           {isInWatchlist(coin.id) ? (
             <HeartFilled onClick={(e) => removeFromWatchlist(e, { type: "removeFromWatchlist", coin })} />

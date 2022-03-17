@@ -1,4 +1,4 @@
-import { DollarCircleOutlined, HeartOutlined } from '@ant-design/icons';
+import { DollarCircleOutlined, HeartFilled } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -14,8 +14,8 @@ export default function Navigation(): ReactElement {
           <NavLink to="/currencies">Crypto Currencies</NavLink>
         </Menu.Item>
         {store.watchlist.length > 0 &&
-          <Menu.Item key="watchlist" icon={<HeartOutlined />}>
-            <NavLink to="/watchlist">Watchlist</NavLink>
+          <Menu.Item key="watchlist" icon={<HeartFilled />}>
+            <NavLink to="/watchlist">Favourites</NavLink>
           </Menu.Item>
         }
       </Menu>

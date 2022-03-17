@@ -1,5 +1,5 @@
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import { Button, Col, Row, Tag, Typography } from 'antd';
+import { Button, Tag, Typography } from 'antd';
 import { ReactElement } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useCoinApi } from "../shared/CoinApi";
@@ -82,9 +82,11 @@ export default function CoinDetails(): ReactElement {
       <Link to="/currencies">
         <Button type="primary">Currency List</Button>
       </Link>
-      <Link to="/watchlist">
-        <Button type="primary">Watchlist</Button>
-      </Link>
+      {store.watchlist.length > 0 &&
+        <Link to="/watchlist">
+          <Button type="primary">Favourites</Button>
+        </Link>
+      }
     </>
   )
 }

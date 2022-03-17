@@ -13,6 +13,12 @@
   top: 20px;
 }
 
-a button:first-child {
+a button.ant-btn-primary:first-child {
   margin-right: 10px;
+}
+
+.ant-layout-content .ant-typography .anticon-heart {
+  position: absolute;
+  right: 20px;
+  top: 60px;
 }
