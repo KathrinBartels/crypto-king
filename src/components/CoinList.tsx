@@ -10,7 +10,7 @@ import { Action, useStore } from './Store';
 
 export default function CoinList(): ReactElement {
   const { store, dispatch } = useStore();
-  const path = "coins/markets?vs_currency=eur&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+  const path = "coins/markets?vs_currency=eur&order=market_cap_desc&per_page=50&page=1&sparkline=false";
   const [coins] = useCoinApi<CoinSimple[]>(path);
   const [search, setSearch] = useState("");
 

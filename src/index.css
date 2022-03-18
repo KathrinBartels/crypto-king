@@ -10,6 +10,7 @@ a {
 }
 
 .ant-layout-header {
+  position: relative;
   background-color: white;
   padding: 0;
 }
@@ -71,4 +72,10 @@ a .ant-row:hover {
 
 .ant-col span.red {
   color: red;
+}
+
+.logo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

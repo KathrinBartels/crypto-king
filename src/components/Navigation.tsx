@@ -19,6 +19,7 @@ export default function Navigation(): ReactElement {
           </Menu.Item>
         }
       </Menu>
+      <img className="logo" width="40" height="40" src="logo.png" />
     </>
   );
 }
