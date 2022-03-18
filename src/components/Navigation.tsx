@@ -11,7 +11,7 @@ export default function Navigation(): ReactElement {
     <>
       <Menu mode="horizontal">
         <Menu.Item key="currencies" icon={<DollarCircleOutlined />}>
-          <NavLink to="/currencies">Crypto Currencies</NavLink>
+          <NavLink to="/currencies">Cryptocurrencies</NavLink>
         </Menu.Item>
         {store.watchlist.length > 0 &&
           <Menu.Item key="watchlist" icon={<HeartFilled />}>
